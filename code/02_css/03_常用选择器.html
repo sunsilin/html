@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* 需求:
+            1:将所有的段落设置为红色(字体)---元素选择器 
+            2:将"儿童相见不相识"设置为红色---id选择器
+            3:将将秋水... 和落霞两行设置为蓝色---class选择器
+            4:所有字体变为红色----通配选择器 *
+
+            1:元素选择器:
+                作用:根据标签名来选中指定的元素
+                语法:标签名{}
+                例子p{} h1{} div{}
+
+            2:id选择器:
+                作用:根据元素的id属性值选中一个元素
+                语法:#id属性值{}
+                例子:#box{} #red{}
+
+            3:类选择器:class
+                作用:根据元素的class属性值选中一组元素
+                语法:.class属性值
+                注意, class可以重复, id不能重复
+                可以同时为一个元素指定多个class属性,多个class之间使用空格隔开
+
+            4:通配选中器:
+                作用:选中页面中的所有元素
+                语法: *
+            
+        */
+
+
+
+        /* p{
+            color: red;
+        } */
+
+
+        /* #red{
+            color:red;
+        } */
+
+
+        /* .blue{
+            color:blue;
+        }
+
+        .abc{
+            font-size: 30px;
+        } */
+
+
+        * {
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <p class="blue abc">我是h1</p>
+    <p>少小离家老大</p>
+    <p>乡音无改鬓毛衰</p>
+    <p id='red'>儿童相见不相识</p>
+    <p>笑问客从何处来</p>
+
+
+    <!-- 
+        class:是一个标签的属性,他和id类似,不同的是class可以重复使用
+                可以通过class属性来为元素分组
+     -->
+    <p class="blue">秋水共长天一色</p>
+    <p class="blue"> 落霞与孤鹜齐飞</p>
+</body>
+</html>
