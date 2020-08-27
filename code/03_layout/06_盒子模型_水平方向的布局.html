@@ -4,8 +4,73 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .outer{
+            widows: 800px;
+            height: 200px;
+            border: 10px red solid;
+
+   
+        }
+        .inner{
+            width: 200px;
+            height:200px;
+            background-color:#bfa;
+            /* margin-left: 100px; */
+
+            /* 
+                元素水平方向的布局:
+                    元素在其父元素中水平方向的位置由以下几个属性决定
+                        margin-left
+                        border-left
+                        pading-left
+                        width
+                        padding-right
+                        boder-right
+                        margin-right
+                一个元素在其父元素中,水平布局必须满足以下格式
+    margin-left+ border-left +pading-left+width+padding-right+boder-right+margin-right
+            =其父元素内容区的宽度(必须满足)
+            1:既:0+0_0+200+0+0+0=800
+                以上等式必须满足, 如果相加结果使等式不成立,则称为过度约束,则等式会自动调整
+            调整情况:
+                如果这7个值没有为auto的情况,则浏览器会自动调整margin-right值以使等式满足
+            调整后
+               0+0_0+200+0+0+600=800
+
+
+            这7个值中有三个可以设置为auto
+                width
+                margin-left
+                margin-right
+                如果某个值为auto,则会自动调整为auto的那个值以使等式成立
+
+                如果将一个宽度和一个外边距设置为诶auto,则宽度会调整到最大,设置为auto的外边距会自动调整为0
+                如果将三个值都设置为auto,则外边距都是0,宽度最大
+                如果将两个外边距都设置为auto, 宽度固定值,则会根将外边距设置为相同的值
+                    所以我们经常利用这个特点,来使一个元素在其父元素中水平居中
+                    实例:
+                        width:xxxpx;
+                        margin: 0 auto;
+             */
+
+             /* 
+                1:都是值: 0+0_0+200+0+0+0=800 调整右外边距
+                2:三个值可以是auto: 左外,宽,右外
+                    三个当中, 如果有一个值是auto, 当等式不满足时, 就调整这个auto值
+                              如果有两个值是auto, 看情况:两个值其中一个是宽度的话, 外边距为0
+                              如果三个值都是auto, 两个外边距就是0 , 宽度最大    
+                              如果是两个外边距设置为auto , 最终会把两个外边距设置为相等的值,以使元素在父元素中居中     
+                3:marginke可以是负值, 无论怎么样都会等式成立            
+              */
+        } 
+
+    </style>
 </head>
 <body>
+    <div class="outer">
+        <div class="inner"></div>
+    </div>
     
 </body>
 </html>
