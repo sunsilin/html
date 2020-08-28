@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/reset.css">
+    <!-- <link rel="stylesheet" href="./css/normalize.css"> -->
+    <!-- 
+        重置样式表,专门用来对浏览器的样式进行重置的
+            reset.css 直接去除了浏览器的默认样式
+            normalize.css 对默认样式进行了统一
+     -->
+    <style>
+
+        /* 
+        
+            默认样式,浏览器都会为元素设置一些默认样式
+            默认样式的存在会影响到页面的布局
+            通常情况下, 我们编写网页的时候必须去掉网页的默认样式(pc端的网页)
+         */
+        /* body{
+            margin: 0;
+        }
+
+        p{
+            margin:0;
+        }
+
+        ul{
+            margin:0;
+            padding:0;
+            list-style:none;
+        } */
+
+        /* 以上比较麻烦, 最简单的做法*/
+
+        *{
+            margin:0;
+            padding:0;
+        }
+     
+        .box1{
+            width:200px;
+            height: 200px;
+            border: 1px solid black;
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+    <p>这是一个段落</p>
+<ul>
+    <li>列表项1</li>
+    <li>列表项2</li>
+    <li>列表项3</li>
+    <li>列表项4</li>
+</ul>
+    
+</body>
+</html>
